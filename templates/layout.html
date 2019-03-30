@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="static/storeicon.png" type="image/x-icon">
+  {% if title %}
+    <title>Store - {{ title }}</title>
+  {% else %}
+  <title>Store</title>
+  {% endif %}
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-sm navbar-light bg-warning navbar-expand-sm">
+    <!-- navbar brand -->
+    <a href="#" class="navbar-brand mr-0 mr-auto-xs">
+      <img src="{{ url_for('static', filename="storeicon.png") }}" alt="you can't see this icon, silly">
+    </a>
+    <!-- toggler button -->
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#Menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- navbar left side -->
+    <div class="collapse navbar-collapse" id="Menu">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a href="{{ url_for('home') }}" class="nav-link">Products</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ url_for('contact') }}" class="nav-link"><span>Contact Us</span></a>
+        </li>
+      </ul>
+
+      <!-- navbar right side -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="{{ url_for('about') }}" class="nav-link">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    {% block content %}{% endblock content %}
+  </div>
+  <script src="{{ url_for('static', filename='jquery.js') }}" charset="utf-8"></script>
+  <!-- <script src="{{ url_for('static', filename='popper.js') }}" charset="utf-8"></script> -->
+  <script src="{{ url_for('static', filename='bootstrap.js') }}" charset="utf-8"></script>
+
+</body>
+</html>
