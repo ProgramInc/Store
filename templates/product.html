@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container-fluid">
+  <div id="product-div" class="row" id="body">
+    <div class="container-fluid">
+      <article class="col-6 myProduct">
+        <h2>{{product.name}}</h2>
+        <p>{{product.description}}</p>
+        <p>{{product.units_sold}} Units Sold</p>
+        <div class="row">
+          <small class="col-sm mr-auto MyBrand">{{product.brand}}</small>
+          <small class="ml-auto mr-auto col-sm MyPrice">{{product.price}}$</small>
+        </div>
+      </article>
+    </div>
+{% endblock content %}

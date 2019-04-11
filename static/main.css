@@ -1,3 +1,29 @@
 a > span {
   white-space: nowrap;
 }
+
+.myProduct {
+  margin: 0.8%;
+  padding: 0.8%;
+  border: 1px solid blue;
+}
+
+/* .MyPrice, .MyBrand {
+  white-space: nowrap;
+} */
+
+small {
+  white-space: nowrap;
+}
+
+/* .myProductName {
+  white-space: nowrap;
+} */
+
+#SortByBestSelling, #SortByProductName, #SortByPrice, #SortByBrandName, #sorting {
+  margin: 0.8%;
+}
+
+#sorting-div {
+  justify-content: center;
+}

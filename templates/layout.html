@@ -15,9 +15,9 @@
 </head>
 <body>
   <!-- navbar -->
-  <nav class="navbar navbar-expand-sm navbar-light bg-warning navbar-expand-sm">
+  <nav class="navbar navbar-expand-sm navbar-light bg-warning">
     <!-- navbar brand -->
-    <a href="#" class="navbar-brand mr-0 mr-auto-xs">
+    <a href="#" class="navbar-brand mr-0">
       <img src="{{ url_for('static', filename="storeicon.png") }}" alt="you can't see this icon, silly">
     </a>
     <!-- toggler button -->
@@ -43,12 +43,16 @@
       </ul>
     </div>
   </nav>
+
+
+
+
   <div class="container-fluid">
     {% block content %}{% endblock content %}
   </div>
   <script src="{{ url_for('static', filename='jquery.js') }}" charset="utf-8"></script>
   <!-- <script src="{{ url_for('static', filename='popper.js') }}" charset="utf-8"></script> -->
   <script src="{{ url_for('static', filename='bootstrap.js') }}" charset="utf-8"></script>
-
+  <!-- <script src="{{ url_for('static', filename='myScript.js') }}" charset="utf-8"></script> -->
 </body>
 </html>
