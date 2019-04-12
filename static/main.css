@@ -16,10 +16,6 @@ small {
   white-space: nowrap;
 }
 
-/* .myProductName {
-  white-space: nowrap;
-} */
-
 #SortByBestSelling, #SortByProductName, #SortByPrice, #SortByBrandName, #sorting {
   margin: 0.8%;
 }

@@ -34,7 +34,6 @@
           <a href="{{ url_for('contact') }}" class="nav-link"><span>Contact Us</span></a>
         </li>
       </ul>
-
       <!-- navbar right side -->
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
@@ -43,15 +42,11 @@
       </ul>
     </div>
   </nav>
-
-
-
-
   <div class="container-fluid">
     {% block content %}{% endblock content %}
   </div>
   <script src="{{ url_for('static', filename='jquery.js') }}" charset="utf-8"></script>
-  <!-- <script src="{{ url_for('static', filename='popper.js') }}" charset="utf-8"></script> -->
+  <script src="{{ url_for('static', filename='popper.js') }}" charset="utf-8"></script>
   <script src="{{ url_for('static', filename='bootstrap.js') }}" charset="utf-8"></script>
   <!-- <script src="{{ url_for('static', filename='myScript.js') }}" charset="utf-8"></script> -->
 </body>
