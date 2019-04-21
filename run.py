@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://zem:Zemer123!@localhost/store'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://zem:zemer123!@mystoredbinstance.cct9ivwkorcm.eu-central-1.rds.amazonaws.com/dbstore'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -18,8 +18,8 @@ class Product(db.Model):
     units_sold = db.Column(db.Integer, nullable=False)
 
     def __repr__(self):
-        return f"'id': '{self.id}', 'brand': '{self.brand}', 'name': '{self.name}'," \
-               f" 'descripstion':'{self.description}', 'price': '{self.price}', 'units_sold': '{self.units_sold}'"
+        return f" 'id': '{self.id}', 'brand': '{self.brand}', 'name': '{self.name}'," \
+               f" 'description':'{self.description}', 'price': '{self.price}', 'units_sold': '{self.units_sold}'"
 
 
 @app.route("/")
